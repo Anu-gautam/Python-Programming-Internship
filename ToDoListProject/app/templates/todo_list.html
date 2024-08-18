@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Todo List</h1>
+  <ul>
+    {% for todo_item in todo_items %}
+      <li>{{ todo_item.title }} ({{ todo_item.completed }})
+        <a href="{% url 'delete_todo_item_view' todo_item.pk %}">Delete</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'add_todo_item_view' %}">Add new item</a>
+{% endblock %}
