@@ -45,6 +45,7 @@ def get_operator(choice):
     elif choice == 4:
         return "/"
 
+#Object mein class call kr rhein hn
 root = tk.Tk()
 root.title("Basic Calculator")
 
@@ -64,6 +65,8 @@ num2_entry.pack()
 operation_frame = tk.Frame(root)
 operation_frame.pack()
 
+
+#operations wale button bnanae ka kaam 
 add_radio = tk.Radiobutton(operation_frame, text="Addition", variable=operation_var, value=1)
 add_radio.pack(side=tk.LEFT)
 subtract_radio = tk.Radiobutton(operation_frame, text="Subtraction", variable=operation_var, value=2)
@@ -73,10 +76,13 @@ multiply_radio.pack(side=tk.LEFT)
 divide_radio = tk.Radiobutton(operation_frame, text="Division", variable=operation_var, value=4)
 divide_radio.pack(side=tk.LEFT)
 
+#to calculate button
 calculate_button = tk.Button(root, text="Calculate", command=calculate)
 calculate_button.pack()
 
+#result display
 result_label = tk.Label(root, text="")
 result_label.pack()
 
+#display screen window
 root.mainloop()
